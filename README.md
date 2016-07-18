@@ -2,6 +2,8 @@ Yii2 Simple RBAC
 ================
 Simple RBAC module for Yii 2 Framework
 
+<b>Caution : This package is still in development stage. Please do not use it for now.</b>
+
 Installation
 ------------
 
