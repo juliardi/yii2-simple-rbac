@@ -8,7 +8,7 @@ use yii\db\Migration;
 class m160718_062842_create_route_table extends Migration
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function up()
     {
@@ -17,13 +17,35 @@ class m160718_062842_create_route_table extends Migration
             'name' => $this->string(100)->notNull(),
         ]);
 
-        $this->insert('rbac_route', [
-            'name' => 'route/example'
-        ]);
+        $data = $this->initialData();
+        foreach ($data as $value) {
+            $this->insert('rbac_route', $value);
+        }
+    }
+
+    private function initialData()
+    {
+        return [
+            ['name' => 'access/index'],
+            ['name' => 'access/view'],
+            ['name' => 'access/create'],
+            ['name' => 'access/update'],
+            ['name' => 'access/delete'],
+            ['name' => 'role/index'],
+            ['name' => 'role/view'],
+            ['name' => 'role/create'],
+            ['name' => 'role/update'],
+            ['name' => 'role/delete'],
+            ['name' => 'route/index'],
+            ['name' => 'route/view'],
+            ['name' => 'route/create'],
+            ['name' => 'route/update'],
+            ['name' => 'route/delete'],
+        ];
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function down()
     {

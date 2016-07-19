@@ -5,7 +5,7 @@ namespace juliardi\simplerbac\controllers;
 use Yii;
 use juliardi\simplerbac\models\RbacRole;
 use juliardi\simplerbac\models\RbacRoleSearch;
-use yii\web\Controller;
+use juliardi\simplerbac\base\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -15,7 +15,7 @@ use yii\filters\VerbFilter;
 class RoleController extends Controller
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function behaviors()
     {
@@ -31,6 +31,7 @@ class RoleController extends Controller
 
     /**
      * Lists all RbacRole models.
+     *
      * @return mixed
      */
     public function actionIndex()
@@ -46,7 +47,9 @@ class RoleController extends Controller
 
     /**
      * Displays a single RbacRole model.
-     * @param integer $id
+     *
+     * @param int $id
+     *
      * @return mixed
      */
     public function actionView($id)
@@ -59,6 +62,7 @@ class RoleController extends Controller
     /**
      * Creates a new RbacRole model.
      * If creation is successful, the browser will be redirected to the 'view' page.
+     *
      * @return mixed
      */
     public function actionCreate()
@@ -77,7 +81,9 @@ class RoleController extends Controller
     /**
      * Updates an existing RbacRole model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     *
+     * @param int $id
+     *
      * @return mixed
      */
     public function actionUpdate($id)
@@ -96,7 +102,9 @@ class RoleController extends Controller
     /**
      * Deletes an existing RbacRole model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     *
+     * @param int $id
+     *
      * @return mixed
      */
     public function actionDelete($id)
@@ -109,8 +117,11 @@ class RoleController extends Controller
     /**
      * Finds the RbacRole model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
+     *
+     * @param int $id
+     *
      * @return RbacRole the loaded model
+     *
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)

@@ -5,9 +5,9 @@ namespace juliardi\simplerbac\base;
 interface UserRbacInterface
 {
     /**
-     * Get role name of user.
+     * Get role of user.
      *
-     * @return string Role name of user
+     * @return juliardi/simplerbac/models/RbacRole Role of user
      */
-    public function getRoleName();
+    public function getRole();
 }

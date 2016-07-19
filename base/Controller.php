@@ -3,6 +3,7 @@
 namespace juliardi\simplerbac\base;
 
 use Yii;
+use juliardi\simplerbac\models\RbacRole;
 use juliardi\simplerbac\models\RbacRoute;
 use juliardi\simplerbac\models\RbacAccessRules;
 use yii\web\Controller;
@@ -18,9 +19,9 @@ class Controller extends Controller
      */
     public function beforeAction($action)
     {
-        $route = $this->id.'/'.$action->id;
-        $roleModel = Yii::$app->user->identity->role;
-        $routeModel = RbacRoute::findOne(['name' => $route]);
+        $roleModel = $this->getRoleModel();
+        $routeModel = $this->getRouteModel($action);
+
         $accessRule = RbacAccessRules::findOne([
             'role_id' => $roleModel->id,
             'route_id' => $routeModel->id,
@@ -31,5 +32,30 @@ class Controller extends Controller
         }
 
         return parent::beforeAction($action);
+    }
+
+    private function getRoleModel()
+    {
+        $user = Yii::$app->user;
+        if ($user->isGuest) {
+            $roleModel = RbacRole::findOne(['name' => 'guest']);
+        } else {
+            $roleModel = Yii::$app->user->identity->getRole();
+        }
+
+        return $roleModel;
+    }
+
+    private function getRouteModel($action)
+    {
+        $route = $this->id.'/'.$action->id;
+
+        $routeModel = RbacRoute::findOne(['name' => $route]);
+
+        if (is_null($routeModel)) {
+            throw new HttpException(500, 'Internal Server Error');
+        } else {
+            return $routeModel;
+        }
     }
 }

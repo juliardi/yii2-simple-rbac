@@ -8,7 +8,7 @@ use yii\db\Migration;
 class m160718_061659_create_role_table extends Migration
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function up()
     {
@@ -17,14 +17,22 @@ class m160718_061659_create_role_table extends Migration
             'name' => $this->string(20)->notNull(),
         ]);
 
-        $this->insert('rbac_role', [
-            'name' => 'administrator'
-        ]);
+        $data = $this->initialData();
+        foreach ($data as $value) {
+            $this->insert('rbac_role', $value);
+        }
+    }
 
+    private function initialData()
+    {
+        return [
+            ['name' => 'superadmin'],
+            ['name' => 'guest'],
+        ];
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function down()
     {

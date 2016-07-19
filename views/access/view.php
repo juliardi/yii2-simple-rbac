@@ -29,8 +29,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'role_id',
-            'route_id',
+            [
+                'label' => 'Role',
+                'value' => $model->role->name,
+            ],
+            [
+                'label' => 'Route',
+                'value' => $model->route->name,
+            ],
         ],
     ]) ?>
 
