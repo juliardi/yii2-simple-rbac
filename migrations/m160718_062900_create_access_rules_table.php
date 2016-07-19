@@ -8,7 +8,7 @@ use yii\db\Migration;
 class m160718_062900_create_access_rules_table extends Migration
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function up()
     {
@@ -18,19 +18,19 @@ class m160718_062900_create_access_rules_table extends Migration
                 'route_id' => $this->integer()->notNull(),
             ]);
 
-            $this->createIndex(
+        $this->createIndex(
                 'idx-access-rules-role_id',
                 'rbac_access_rules',
                 'role_id'
             );
 
-            $this->createIndex(
+        $this->createIndex(
                 'idx-access-rules-route_id',
                 'rbac_access_rules',
                 'route_id'
             );
 
-            $this->addForeignKey(
+        $this->addForeignKey(
                 'fk-access-rules-role_id',
                 'rbac_access_rules',
                 'role_id',
@@ -39,7 +39,7 @@ class m160718_062900_create_access_rules_table extends Migration
                 'CASCADE'
             );
 
-            $this->addForeignKey(
+        $this->addForeignKey(
                 'fk-access-rules-route_id',
                 'rbac_access_rules',
                 'route_id',
@@ -48,14 +48,80 @@ class m160718_062900_create_access_rules_table extends Migration
                 'CASCADE'
             );
 
-            $this->insert('rbac_access_rules', [
+        $this->insert('rbac_access_rules', [
                 'role_id' => 1,
                 'route_id' => 1,
             ]);
     }
 
+    private function initialData()
+    {
+        return [
+            [
+                'role_id' => 1,
+                'route_id' => 1,
+            ],
+            [
+                'role_id' => 1,
+                'route_id' => 2,
+            ],
+            [
+                'role_id' => 1,
+                'route_id' => 3,
+            ],
+            [
+                'role_id' => 1,
+                'route_id' => 4,
+            ],
+            [
+                'role_id' => 1,
+                'route_id' => 5,
+            ],
+            [
+                'role_id' => 1,
+                'route_id' => 6,
+            ],
+            [
+                'role_id' => 1,
+                'route_id' => 7,
+            ],
+            [
+                'role_id' => 1,
+                'route_id' => 8,
+            ],
+            [
+                'role_id' => 1,
+                'route_id' => 9,
+            ],
+            [
+                'role_id' => 1,
+                'route_id' => 10,
+            ],
+            [
+                'role_id' => 1,
+                'route_id' => 11,
+            ],
+            [
+                'role_id' => 1,
+                'route_id' => 12,
+            ],
+            [
+                'role_id' => 1,
+                'route_id' => 13,
+            ],
+            [
+                'role_id' => 1,
+                'route_id' => 14,
+            ],
+            [
+                'role_id' => 1,
+                'route_id' => 15,
+            ],
+        ];
+    }
+
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function down()
     {

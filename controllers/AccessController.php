@@ -8,7 +8,7 @@ use juliardi\simplerbac\models\RbacRoute;
 use juliardi\simplerbac\models\RbacAccessRules;
 use juliardi\simplerbac\models\RbacAccessRulesSearch;
 use yii\helpers\ArrayHelper;
-use yii\web\Controller;
+use juliardi\simplerbac\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -18,7 +18,7 @@ use yii\filters\VerbFilter;
 class AccessController extends Controller
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function behaviors()
     {
@@ -34,6 +34,7 @@ class AccessController extends Controller
 
     /**
      * Lists all RbacAccessRules models.
+     *
      * @return mixed
      */
     public function actionIndex()
@@ -49,7 +50,9 @@ class AccessController extends Controller
 
     /**
      * Displays a single RbacAccessRules model.
-     * @param integer $id
+     *
+     * @param int $id
+     *
      * @return mixed
      */
     public function actionView($id)
@@ -62,6 +65,7 @@ class AccessController extends Controller
     /**
      * Creates a new RbacAccessRules model.
      * If creation is successful, the browser will be redirected to the 'view' page.
+     *
      * @return mixed
      */
     public function actionCreate()
@@ -73,6 +77,7 @@ class AccessController extends Controller
         } else {
             $roleList = ArrayHelper::map(RbacRole::find()->all(), 'id', 'name');
             $routeList = ArrayHelper::map(RbacRoute::find()->all(), 'id', 'name');
+
             return $this->render('create', [
                 'model' => $model,
                 'roleList' => $roleList,
@@ -84,7 +89,9 @@ class AccessController extends Controller
     /**
      * Updates an existing RbacAccessRules model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     *
+     * @param int $id
+     *
      * @return mixed
      */
     public function actionUpdate($id)
@@ -96,6 +103,7 @@ class AccessController extends Controller
         } else {
             $roleList = ArrayHelper::map(RbacRole::find()->all(), 'id', 'name');
             $routeList = ArrayHelper::map(RbacRoute::find()->all(), 'id', 'name');
+
             return $this->render('update', [
                 'model' => $model,
                 'roleList' => $roleList,
@@ -107,7 +115,9 @@ class AccessController extends Controller
     /**
      * Deletes an existing RbacAccessRules model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     *
+     * @param int $id
+     *
      * @return mixed
      */
     public function actionDelete($id)
@@ -120,8 +130,11 @@ class AccessController extends Controller
     /**
      * Finds the RbacAccessRules model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
+     *
+     * @param int $id
+     *
      * @return RbacAccessRules the loaded model
+     *
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)

@@ -6,7 +6,7 @@ use Yii;
 use juliardi\simplerbac\models\RbacRoute;
 use juliardi\simplerbac\models\RbacRouteSearch;
 use dmstr\helpers\Metadata;
-use yii\web\Controller;
+use juliardi\simplerbac\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -16,7 +16,7 @@ use yii\filters\VerbFilter;
 class RouteController extends Controller
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function behaviors()
     {
@@ -32,6 +32,7 @@ class RouteController extends Controller
 
     /**
      * Lists all RbacRoute models.
+     *
      * @return mixed
      */
     public function actionIndex()
@@ -47,7 +48,9 @@ class RouteController extends Controller
 
     /**
      * Displays a single RbacRoute model.
-     * @param integer $id
+     *
+     * @param int $id
+     *
      * @return mixed
      */
     public function actionView($id)
@@ -60,6 +63,7 @@ class RouteController extends Controller
     /**
      * Creates a new RbacRoute model.
      * If creation is successful, the browser will be redirected to the 'view' page.
+     *
      * @return mixed
      */
     public function actionCreate()
@@ -70,6 +74,7 @@ class RouteController extends Controller
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             $routeList = $this->generateRouteList();
+
             return $this->render('create', [
                 'model' => $model,
                 'routeList' => $routeList,
@@ -80,7 +85,9 @@ class RouteController extends Controller
     /**
      * Updates an existing RbacRoute model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     *
+     * @param int $id
+     *
      * @return mixed
      */
     public function actionUpdate($id)
@@ -91,6 +98,7 @@ class RouteController extends Controller
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             $routeList = $this->generateRouteList();
+
             return $this->render('update', [
                 'model' => $model,
                 'routeList' => $routeList,
@@ -101,7 +109,8 @@ class RouteController extends Controller
     /**
      * @return array
      */
-    public function generateRouteList() {
+    public function generateRouteList()
+    {
         $routeList = array();
         $controllers = Metadata::getModuleControllers();
         // var_dump($controllers);
@@ -110,7 +119,7 @@ class RouteController extends Controller
 
             $actions = Metadata::getControllerActions($objController);
             foreach ($actions as $action) {
-                $routeName = $objController->id . '/' . $action['name'];
+                $routeName = $objController->id.'/'.$action['name'];
                 $routeList[$routeName] = $routeName;
             }
         }
@@ -121,7 +130,9 @@ class RouteController extends Controller
     /**
      * Deletes an existing RbacRoute model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     *
+     * @param int $id
+     *
      * @return mixed
      */
     public function actionDelete($id)
@@ -134,8 +145,11 @@ class RouteController extends Controller
     /**
      * Finds the RbacRoute model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
+     *
+     * @param int $id
+     *
      * @return RbacRoute the loaded model
+     *
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
