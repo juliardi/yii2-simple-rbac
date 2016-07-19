@@ -1,12 +1,12 @@
 <?php
 
-namespace app\controllers;
+namespace juliardi\simplerbac\controllers;
 
 use Yii;
-use app\models\RbacRole;
-use app\models\RbacRoute;
-use app\models\RbacAccessRules;
-use app\models\RbacAccessRulesSearch;
+use juliardi\simplerbac\models\RbacRole;
+use juliardi\simplerbac\models\RbacRoute;
+use juliardi\simplerbac\models\RbacAccessRules;
+use juliardi\simplerbac\models\RbacAccessRulesSearch;
 use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

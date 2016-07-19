@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\RbacRole */
+/* @var $model juliardi\simplerbac\models\RbacRole */
 
 $this->title = 'Create Rbac Role';
 $this->params['breadcrumbs'][] = ['label' => 'Rbac Roles', 'url' => ['index']];

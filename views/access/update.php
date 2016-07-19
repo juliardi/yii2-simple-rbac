@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\RbacAccessRules */
+/* @var $model juliardi\simplerbac\models\RbacAccessRules */
 
 $this->title = 'Update Rbac Access Rules: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Rbac Access Rules', 'url' => ['index']];

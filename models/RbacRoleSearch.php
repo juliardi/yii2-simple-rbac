@@ -1,14 +1,14 @@
 <?php
 
-namespace app\models;
+namespace juliardi\simplerbac\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\RbacRole;
+use juliardi\simplerbac\models\RbacRole;
 
 /**
- * RbacRoleSearch represents the model behind the search form about `app\models\RbacRole`.
+ * RbacRoleSearch represents the model behind the search form about `juliardi\simplerbac\models\RbacRole`.
  */
 class RbacRoleSearch extends RbacRole
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace app\models;
+namespace juliardi\simplerbac\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\RbacAccessRules;
+use juliardi\simplerbac\models\RbacAccessRules;
 
 /**
- * RbacAccessRulesSearch represents the model behind the search form about `app\models\RbacAccessRules`.
+ * RbacAccessRulesSearch represents the model behind the search form about `juliardi\simplerbac\models\RbacAccessRules`.
  */
 class RbacAccessRulesSearch extends RbacAccessRules
 {

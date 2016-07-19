@@ -1,10 +1,10 @@
 <?php
 
-namespace app\controllers;
+namespace juliardi\simplerbac\controllers;
 
 use Yii;
-use app\models\RbacRoute;
-use app\models\RbacRouteSearch;
+use juliardi\simplerbac\models\RbacRoute;
+use juliardi\simplerbac\models\RbacRouteSearch;
 use dmstr\helpers\Metadata;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

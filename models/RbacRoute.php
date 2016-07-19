@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace juliardi\simplerbac\models;
 
 use Yii;
 

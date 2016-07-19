@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\RbacRoute */
+/* @var $model juliardi\simplerbac\models\RbacRoute */
 
 $this->title = 'Update Rbac Route: ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Rbac Routes', 'url' => ['index']];

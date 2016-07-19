@@ -2,7 +2,7 @@
 
 namespace tests\codeception\unit\models;
 
-use app\models\ContactForm;
+use juliardi\simplerbac\models\ContactForm;
 use Yii;
 use yii\codeception\TestCase;
 use Codeception\Specify;
@@ -28,7 +28,7 @@ class ContactFormTest extends TestCase
     public function testContact()
     {
         /** @var ContactForm $model */
-        $model = $this->getMockBuilder('app\models\ContactForm')
+        $model = $this->getMockBuilder('juliardi\simplerbac\models\ContactForm')
             ->setMethods(['validate'])
             ->getMock();
         $model->expects($this->once())->method('validate')->will($this->returnValue(true));

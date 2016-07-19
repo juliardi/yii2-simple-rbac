@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\RbacRoleSearch */
+/* @var $model juliardi\simplerbac\models\RbacRoleSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 

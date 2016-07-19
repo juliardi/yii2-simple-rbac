@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\RbacRoleSearch */
+/* @var $searchModel juliardi\simplerbac\models\RbacRoleSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Rbac Roles';

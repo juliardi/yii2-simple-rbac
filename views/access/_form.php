@@ -5,7 +5,7 @@ use yii\widgets\ActiveForm;
 use kartik\select2\Select2;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\RbacAccessRules */
+/* @var $model juliardi\simplerbac\models\RbacAccessRules */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 

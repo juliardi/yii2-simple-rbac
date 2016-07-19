@@ -1,23 +1,20 @@
 <?php
 
-namespace app\models;
-
-use Yii;
+namespace juliardi\simplerbac\models;
 
 /**
  * This is the model class for table "rbac_access_rules".
  *
- * @property integer $id
- * @property integer $role_id
- * @property integer $route_id
- *
+ * @property int $id
+ * @property int $role_id
+ * @property int $route_id
  * @property RbacRole $role
  * @property RbacRoute $route
  */
 class RbacAccessRules extends \yii\db\ActiveRecord
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public static function tableName()
     {
@@ -25,7 +22,7 @@ class RbacAccessRules extends \yii\db\ActiveRecord
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function rules()
     {
@@ -38,7 +35,7 @@ class RbacAccessRules extends \yii\db\ActiveRecord
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function attributeLabels()
     {
@@ -63,5 +60,9 @@ class RbacAccessRules extends \yii\db\ActiveRecord
     public function getRoute()
     {
         return $this->hasOne(RbacRoute::className(), ['id' => 'route_id']);
+    }
+
+    public static function getRulesByRoleAndRoute($roleName, $routeName)
+    {
     }
 }

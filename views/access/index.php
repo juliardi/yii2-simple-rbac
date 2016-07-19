@@ -1,13 +1,13 @@
 <?php
 
-use app\models\RbacRole;
-use app\models\RbacRoute;
+use juliardi\simplerbac\models\RbacRole;
+use juliardi\simplerbac\models\RbacRoute;
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\RbacAccessRulesSearch */
+/* @var $searchModel juliardi\simplerbac\models\RbacAccessRulesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Rbac Access Rules';
