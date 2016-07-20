@@ -2,21 +2,18 @@
 
 namespace juliardi\simplerbac\models;
 
-use Yii;
-
 /**
  * This is the model class for table "rbac_role".
  *
- * @property integer $id
+ * @property int $id
  * @property string $name
- *
  * @property RbacAccessRules[] $rbacAccessRules
  * @property RbacUser[] $rbacUsers
  */
-class RbacRole extends \yii\db\ActiveRecord
+class RbacRole extends \juliardi\simplerbac\base
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public static function tableName()
     {
@@ -24,7 +21,7 @@ class RbacRole extends \yii\db\ActiveRecord
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function rules()
     {
@@ -35,7 +32,7 @@ class RbacRole extends \yii\db\ActiveRecord
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function attributeLabels()
     {

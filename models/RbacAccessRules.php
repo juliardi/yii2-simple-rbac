@@ -11,7 +11,7 @@ namespace juliardi\simplerbac\models;
  * @property RbacRole $role
  * @property RbacRoute $route
  */
-class RbacAccessRules extends \yii\db\ActiveRecord
+class RbacAccessRules extends \juliardi\simplerbac\base\ActiveRecord
 {
     /**
      * {@inheritdoc}

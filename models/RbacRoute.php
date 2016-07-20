@@ -2,20 +2,17 @@
 
 namespace juliardi\simplerbac\models;
 
-use Yii;
-
 /**
  * This is the model class for table "rbac_route".
  *
- * @property integer $id
+ * @property int $id
  * @property string $name
- *
  * @property RbacAccessRules[] $rbacAccessRules
  */
-class RbacRoute extends \yii\db\ActiveRecord
+class RbacRoute extends \juliardi\simplerbac\base
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public static function tableName()
     {
@@ -23,7 +20,7 @@ class RbacRoute extends \yii\db\ActiveRecord
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function rules()
     {
@@ -34,7 +31,7 @@ class RbacRoute extends \yii\db\ActiveRecord
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function attributeLabels()
     {
