@@ -8,7 +8,6 @@ namespace juliardi\simplerbac\models;
  * @property int $id
  * @property string $name
  * @property RbacAccessRules[] $rbacAccessRules
- * @property RbacUser[] $rbacUsers
  */
 class RbacRole extends \juliardi\simplerbac\base\ActiveRecord
 {
@@ -48,13 +47,5 @@ class RbacRole extends \juliardi\simplerbac\base\ActiveRecord
     public function getRbacAccessRules()
     {
         return $this->hasMany(RbacAccessRules::className(), ['role_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getRbacUsers()
-    {
-        return $this->hasMany(RbacUser::className(), ['role_id' => 'id']);
     }
 }

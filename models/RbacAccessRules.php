@@ -61,8 +61,4 @@ class RbacAccessRules extends \juliardi\simplerbac\base\ActiveRecord
     {
         return $this->hasOne(RbacRoute::className(), ['id' => 'route_id']);
     }
-
-    public static function getRulesByRoleAndRoute($roleName, $routeName)
-    {
-    }
 }
