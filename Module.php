@@ -22,4 +22,9 @@ class Module extends BaseModule
      * {@inheritdoc}
      */
     public $controllerNamespace = 'juliardi\simplerbac\controllers';
+
+    /**
+     * @var yii\db\Connection Database connection used by extension
+     */
+    public $db;
 }
