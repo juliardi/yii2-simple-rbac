@@ -12,5 +12,5 @@ interface UserRbacInterface
      *
      * @return juliardi/simplerbac/models/RbacRole Role of user
      */
-    public function getRole();
+    public function getRoleModel();
 }

@@ -44,7 +44,7 @@ class Controller extends Controller
         if ($user->isGuest) {
             $roleModel = RbacRole::findOne(['name' => 'guest']);
         } else {
-            $roleModel = Yii::$app->user->identity->getRole();
+            $roleModel = Yii::$app->user->identity->getRoleModel();
         }
 
         return $roleModel;
