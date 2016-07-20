@@ -48,10 +48,11 @@ class m160718_062900_create_access_rules_table extends Migration
                 'CASCADE'
             );
 
-        $this->insert('rbac_access_rules', [
-                'role_id' => 1,
-                'route_id' => 1,
-            ]);
+        $data = $this->initialData();
+
+        foreach ($data as $value) {
+            $this->insert('rbac_access_rules', $value);
+        }
     }
 
     private function initialData()

@@ -2,6 +2,9 @@
 
 namespace juliardi\simplerbac\base;
 
+/**
+ * @author Juliardi <juliardi93@gmail.com>
+ */
 interface UserRbacInterface
 {
     /**

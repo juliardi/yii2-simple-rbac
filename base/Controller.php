@@ -10,7 +10,7 @@ use yii\web\Controller;
 use yii\web\HttpException;
 
 /**
- *
+ * @author Juliardi <juliardi93@gmail.com>
  */
 class Controller extends Controller
 {
@@ -19,6 +19,10 @@ class Controller extends Controller
      */
     public function beforeAction($action)
     {
+        if (!parent::beforeAction($action)) {
+            return false;
+        }
+
         $roleModel = $this->getRoleModel();
         $routeModel = $this->getRouteModel($action);
 
@@ -31,7 +35,7 @@ class Controller extends Controller
             throw new HttpException(403, 'Unauthorized');
         }
 
-        return parent::beforeAction($action);
+        return true;
     }
 
     private function getRoleModel()

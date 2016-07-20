@@ -3,10 +3,10 @@
 namespace juliardi\simplerbac\controllers;
 
 use Yii;
+use juliardi\simplerbac\base\Controller;
 use juliardi\simplerbac\models\RbacRoute;
 use juliardi\simplerbac\models\RbacRouteSearch;
 use dmstr\helpers\Metadata;
-use juliardi\simplerbac\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 

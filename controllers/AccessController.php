@@ -3,12 +3,12 @@
 namespace juliardi\simplerbac\controllers;
 
 use Yii;
+use juliardi\simplerbac\base\Controller;
 use juliardi\simplerbac\models\RbacRole;
 use juliardi\simplerbac\models\RbacRoute;
 use juliardi\simplerbac\models\RbacAccessRules;
 use juliardi\simplerbac\models\RbacAccessRulesSearch;
 use yii\helpers\ArrayHelper;
-use juliardi\simplerbac\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
