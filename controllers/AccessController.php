@@ -17,6 +17,7 @@ use yii\filters\VerbFilter;
  */
 class AccessController extends Controller
 {
+    public $layout = 'main';
     /**
      * {@inheritdoc}
      */

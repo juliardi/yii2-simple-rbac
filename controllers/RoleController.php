@@ -14,6 +14,7 @@ use yii\filters\VerbFilter;
  */
 class RoleController extends Controller
 {
+    public $layout = 'main';
     /**
      * {@inheritdoc}
      */

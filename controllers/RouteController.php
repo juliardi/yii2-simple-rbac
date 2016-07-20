@@ -15,6 +15,7 @@ use yii\filters\VerbFilter;
  */
 class RouteController extends Controller
 {
+    public $layout = 'main';
     /**
      * {@inheritdoc}
      */
