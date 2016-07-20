@@ -1,4 +1,4 @@
-Yii2 Simple RBAC [![Status](https://img.shields.io/badge/status-development-yellow.svg)] [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+Yii2 Simple RBAC ![Status](https://img.shields.io/badge/status-development-yellow.svg) [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 ================
 Simple RBAC module for Yii 2 Framework
 
