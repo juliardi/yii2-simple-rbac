@@ -10,7 +10,7 @@ namespace juliardi\simplerbac\models;
  * @property RbacAccessRules[] $rbacAccessRules
  * @property RbacUser[] $rbacUsers
  */
-class RbacRole extends \juliardi\simplerbac\base
+class RbacRole extends \juliardi\simplerbac\base\ActiveRecord
 {
     /**
      * {@inheritdoc}

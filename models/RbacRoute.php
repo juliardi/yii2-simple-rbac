@@ -9,7 +9,7 @@ namespace juliardi\simplerbac\models;
  * @property string $name
  * @property RbacAccessRules[] $rbacAccessRules
  */
-class RbacRoute extends \juliardi\simplerbac\base
+class RbacRoute extends \juliardi\simplerbac\base\ActiveRecord
 {
     /**
      * {@inheritdoc}
