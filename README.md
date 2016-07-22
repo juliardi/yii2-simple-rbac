@@ -33,21 +33,26 @@ Setup
 Once the extension is installed, you must first set it up by :
 
 1. Register yii2-simple-rbac as a module in `config\web.php`. Add this code before `return $config;` statement :
-```
-$config['bootstrap'][] = 'simplerbac';
-    $config['modules']['simplerbac'] = [
-        'class' => 'juliardi\simplerbac\Module',
-        'db' => 'db', //you can change this in case you are using different database for access control
-    ];
-```
+    
+    ```
+    $config['bootstrap'][] = 'simplerbac';
+        $config['modules']['simplerbac'] = [
+            'class' => 'juliardi\simplerbac\Module',
+            'db' => 'db', //you can change this in case you are using different database for access control
+        ];
+    ```
+
 2. Run migrations
-```
-php yii migrate/up --migrationPath=@juliardi/simplerbac/migrations
-```
-or in case you are using different database (we assume here as `db2`):
-```
-php yii migrate/up --migrationPath=@juliardi/simplerbac/migrations --db=db2
-```
+    
+    ```
+    php yii migrate/up --migrationPath=@juliardi/simplerbac/migrations
+    ```
+    or in case you are using different database (we assume here as `db2`):
+    
+    ```
+    php yii migrate/up --migrationPath=@juliardi/simplerbac/migrations --db=db2
+    ```
+
 3. Create 'user' table with a foreign key to table 'rbac_role'. You can see an example of yii2 migrations in `examples\migrations` directory.
 4. Generate the model and CRUD of 'user' table using Gii
 5. Implements `juliardi\simplerbac\base\UserRbacInterface` in your User model. You can see an example of yii2 model in `examples\models` directory.
@@ -60,6 +65,7 @@ Usage
 -----
 
 Once the extension is configured, simply use it by :
+
 1. Extends `juliardi/simplerbac/base/Controller` in your controller
 2. That's all. You can set your access rules for your action by accessing :
 ```
