@@ -49,9 +49,9 @@ or in case you are using different database (we assume here as `db2`):
 php yii migrate/up --migrationPath=@juliardi/simplerbac/migrations --db=db2
 ```
 3. Create 'user' table with a foreign key to table 'rbac_role'. You can see an example of yii2 migrations in `examples\migrations` directory.
-2. Generate the model and CRUD of 'user' table using Gii
-3. Implements `juliardi\simplerbac\base\UserRbacInterface` in your User model. You can see an example of yii2 model in `examples\models` directory.
-4. You can now access it by visiting :
+4. Generate the model and CRUD of 'user' table using Gii
+5. Implements `juliardi\simplerbac\base\UserRbacInterface` in your User model. You can see an example of yii2 model in `examples\models` directory.
+6. You can now access it by visiting :
 ```
 http://yourproject.dev/index.php?r=simplerbac
 ```
@@ -60,4 +60,8 @@ Usage
 -----
 
 Once the extension is configured, simply use it by :
-1.
+1. Extends `juliardi/simplerbac/base/Controller` in your controller
+2. That's all. You can set your access rules for your action by accessing :
+```
+http://yourproject.dev/index.php?r=simplerbac
+```
