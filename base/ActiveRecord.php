@@ -4,7 +4,6 @@ namespace juliardi\simplerbac\base;
 
 use Yii;
 use yii\db\ActiveRecord as BaseActiveRecord;
-use yii\db\BaseActiveRecord;
 
 /**
  * @author Juliardi <juliardi93@gmail.com>
