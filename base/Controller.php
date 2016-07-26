@@ -6,13 +6,13 @@ use Yii;
 use juliardi\simplerbac\models\RbacRole;
 use juliardi\simplerbac\models\RbacRoute;
 use juliardi\simplerbac\models\RbacAccessRules;
-use yii\web\Controller;
+use yii\web\Controller as BaseController;
 use yii\web\HttpException;
 
 /**
  * @author Juliardi <juliardi93@gmail.com>
  */
-class Controller extends Controller
+class Controller extends BaseController
 {
     /**
      * {@inheritdoc}
